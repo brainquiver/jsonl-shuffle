@@ -1,0 +1,20 @@
+[package]
+name = "jsonl-shuffle"
+version = "1.0.0"
+edition = "2021"
+license = "MIT"
+description = "Shuffle the lines of a JSONL file into a new file, in parallel, in the order Python's random.shuffle gives."
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+memchr = "2"
+memmap2 = "0.9"
+rayon = "1"
+serde_json = { version = "1", features = ["preserve_order"] }
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
