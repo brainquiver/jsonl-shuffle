@@ -1,12 +1,15 @@
 ---
 type: Repository Guide
 title: JSONL Shuffle
-description: Shuffles the lines of a JSONL file into a new file in parallel, in the order Python's random.shuffle gives for the same seed.
+description: Rust based JSONL shuffler with multithreading that reproduces Python's random.shuffle order for a given seed.
 status: stable
 tags: [data, jsonl, rust]
 generated:
   by: claude-code/opus-5.5
   at: 2026-09-29T04:30:00Z
+edited:
+  by: claude-code/opus-5.5
+  at: 2026-10-02T17:54:03Z
 ---
 
 # JSONL Shuffle
